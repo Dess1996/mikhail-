@@ -1,7 +1,5 @@
 #!/bin/bash
-ip a> /dev/null
-b = `ifup lo` > /dev/null
-if [ "$b" ] 
+if [ `ifup lo`  ]  
 then
 echo "Bringing interface $b up"
 else
