@@ -10,5 +10,5 @@ if [[ $status = DOWN ]]; then
         echo "Interface $interface is down! "
         ifup $interface
 fi
-echo "I am on" `cat /etc/issue`
+echo "I am on" `lsb_release -i`
 exit 0
