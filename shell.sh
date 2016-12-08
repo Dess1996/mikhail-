@@ -7,7 +7,8 @@ interface=$1
 
 status=$(ip link show | grep $interface | awk '{ print $9}')
 if [[ $status = DOWN ]]; then
-        echo "Interface $interface is down!"
+        echo "Interface $interface is down! "
         ifup $interface
 fi
+echo "I am on" `cat /etc/issue`
 exit 0
